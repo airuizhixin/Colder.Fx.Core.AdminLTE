@@ -1,0 +1,1369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_AutoSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="code" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_AutoSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Send_AutoSMSResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_XinxiSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="code" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_XinxiSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Send_XinxiSMSResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_FangSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="code" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_FangSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Send_FangSMSResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_Sosoo_Yuyin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="code" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_Sosoo_YuyinResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Send_Sosoo_YuyinResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_YinzhouYuqingSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="msg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_YinzhouYuqingSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Send_YinzhouYuqingSMSResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_JiangbeiYuqingSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="msg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_JiangbeiYuqingSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Send_JiangbeiYuqingSMSResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_HaishuYuqingSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="msg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_HaishuYuqingSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Send_HaishuYuqingSMSResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_JiangdongSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="msg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_JiangdongSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Send_JiangdongSMSResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_SMS_Template">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="source" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="msg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_SMS_TemplateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Send_SMS_TemplateResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendCnoolVerifyCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="validateCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendCnoolVerifyCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendCnoolVerifyCodeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendChengguan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="validateCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendChengguanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendChengguanResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendHangzhouKexie">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="validateCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendHangzhouKexieResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendHangzhouKexieResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendTongfuhui">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="validateCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendTongfuhuiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendTongfuhuiResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendHangzhouKexie2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendHangzhouKexie2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendHangzhouKexie2Result" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendShiJianJu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendShiJianJuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendShiJianJuResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendStars">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendStarsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendStarsResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendPasswordReset">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendPasswordResetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendPasswordResetResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendNbcia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="validateCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendNbciaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendNbciaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendTBH">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="link" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendTBHResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendTBHResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendShiGong">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="param1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="param2" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendShiGongResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendShiGongResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_ShiGong_VerifyCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="smscode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_ShiGong_VerifyCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Send_ShiGong_VerifyCodeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_ShiJianJu_Notice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="noticeMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_ShiJianJu_NoticeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Send_ShiJianJu_NoticeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_ShiJianJu_VerifyCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="smscode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_ShiJianJu_VerifyCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Send_ShiJianJu_VerifyCodeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_JHSWZGK_VerifyCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="smscode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_JHSWZGK_VerifyCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Send_JHSWZGK_VerifyCodeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_JHSWZGK_Notice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="templateId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="noticeMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_JHSWZGK_NoticeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Send_JHSWZGK_NoticeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_ICBC_Wechat_Notice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="templateId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="noticeMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_ICBC_Wechat_NoticeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Send_ICBC_Wechat_NoticeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_BusinessManage_VerifyCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="smscode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="voice" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_BusinessManage_VerifyCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Send_BusinessManage_VerifyCodeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_BusinessManage_Notice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="project" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="time" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_BusinessManage_NoticeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Send_BusinessManage_NoticeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_BusinessManage_AuditNotice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_BusinessManage_AuditNoticeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Send_BusinessManage_AuditNoticeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_CCS_Exam">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send_CCS_ExamResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Send_CCS_ExamResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="Send_AutoSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:Send_AutoSMS" />
+  </wsdl:message>
+  <wsdl:message name="Send_AutoSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:Send_AutoSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="Send_XinxiSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:Send_XinxiSMS" />
+  </wsdl:message>
+  <wsdl:message name="Send_XinxiSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:Send_XinxiSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="Send_FangSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:Send_FangSMS" />
+  </wsdl:message>
+  <wsdl:message name="Send_FangSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:Send_FangSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="Send_Sosoo_YuyinSoapIn">
+    <wsdl:part name="parameters" element="tns:Send_Sosoo_Yuyin" />
+  </wsdl:message>
+  <wsdl:message name="Send_Sosoo_YuyinSoapOut">
+    <wsdl:part name="parameters" element="tns:Send_Sosoo_YuyinResponse" />
+  </wsdl:message>
+  <wsdl:message name="Send_YinzhouYuqingSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:Send_YinzhouYuqingSMS" />
+  </wsdl:message>
+  <wsdl:message name="Send_YinzhouYuqingSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:Send_YinzhouYuqingSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="Send_JiangbeiYuqingSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:Send_JiangbeiYuqingSMS" />
+  </wsdl:message>
+  <wsdl:message name="Send_JiangbeiYuqingSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:Send_JiangbeiYuqingSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="Send_HaishuYuqingSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:Send_HaishuYuqingSMS" />
+  </wsdl:message>
+  <wsdl:message name="Send_HaishuYuqingSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:Send_HaishuYuqingSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="Send_JiangdongSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:Send_JiangdongSMS" />
+  </wsdl:message>
+  <wsdl:message name="Send_JiangdongSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:Send_JiangdongSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="Send_SMS_TemplateSoapIn">
+    <wsdl:part name="parameters" element="tns:Send_SMS_Template" />
+  </wsdl:message>
+  <wsdl:message name="Send_SMS_TemplateSoapOut">
+    <wsdl:part name="parameters" element="tns:Send_SMS_TemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendCnoolVerifyCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:SendCnoolVerifyCode" />
+  </wsdl:message>
+  <wsdl:message name="SendCnoolVerifyCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:SendCnoolVerifyCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendChengguanSoapIn">
+    <wsdl:part name="parameters" element="tns:SendChengguan" />
+  </wsdl:message>
+  <wsdl:message name="SendChengguanSoapOut">
+    <wsdl:part name="parameters" element="tns:SendChengguanResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendHangzhouKexieSoapIn">
+    <wsdl:part name="parameters" element="tns:SendHangzhouKexie" />
+  </wsdl:message>
+  <wsdl:message name="SendHangzhouKexieSoapOut">
+    <wsdl:part name="parameters" element="tns:SendHangzhouKexieResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendTongfuhuiSoapIn">
+    <wsdl:part name="parameters" element="tns:SendTongfuhui" />
+  </wsdl:message>
+  <wsdl:message name="SendTongfuhuiSoapOut">
+    <wsdl:part name="parameters" element="tns:SendTongfuhuiResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendHangzhouKexie2SoapIn">
+    <wsdl:part name="parameters" element="tns:SendHangzhouKexie2" />
+  </wsdl:message>
+  <wsdl:message name="SendHangzhouKexie2SoapOut">
+    <wsdl:part name="parameters" element="tns:SendHangzhouKexie2Response" />
+  </wsdl:message>
+  <wsdl:message name="SendShiJianJuSoapIn">
+    <wsdl:part name="parameters" element="tns:SendShiJianJu" />
+  </wsdl:message>
+  <wsdl:message name="SendShiJianJuSoapOut">
+    <wsdl:part name="parameters" element="tns:SendShiJianJuResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendStarsSoapIn">
+    <wsdl:part name="parameters" element="tns:SendStars" />
+  </wsdl:message>
+  <wsdl:message name="SendStarsSoapOut">
+    <wsdl:part name="parameters" element="tns:SendStarsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendPasswordResetSoapIn">
+    <wsdl:part name="parameters" element="tns:SendPasswordReset" />
+  </wsdl:message>
+  <wsdl:message name="SendPasswordResetSoapOut">
+    <wsdl:part name="parameters" element="tns:SendPasswordResetResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendNbciaSoapIn">
+    <wsdl:part name="parameters" element="tns:SendNbcia" />
+  </wsdl:message>
+  <wsdl:message name="SendNbciaSoapOut">
+    <wsdl:part name="parameters" element="tns:SendNbciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendTBHSoapIn">
+    <wsdl:part name="parameters" element="tns:SendTBH" />
+  </wsdl:message>
+  <wsdl:message name="SendTBHSoapOut">
+    <wsdl:part name="parameters" element="tns:SendTBHResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendShiGongSoapIn">
+    <wsdl:part name="parameters" element="tns:SendShiGong" />
+  </wsdl:message>
+  <wsdl:message name="SendShiGongSoapOut">
+    <wsdl:part name="parameters" element="tns:SendShiGongResponse" />
+  </wsdl:message>
+  <wsdl:message name="Send_ShiGong_VerifyCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:Send_ShiGong_VerifyCode" />
+  </wsdl:message>
+  <wsdl:message name="Send_ShiGong_VerifyCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:Send_ShiGong_VerifyCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Send_ShiJianJu_NoticeSoapIn">
+    <wsdl:part name="parameters" element="tns:Send_ShiJianJu_Notice" />
+  </wsdl:message>
+  <wsdl:message name="Send_ShiJianJu_NoticeSoapOut">
+    <wsdl:part name="parameters" element="tns:Send_ShiJianJu_NoticeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Send_ShiJianJu_VerifyCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:Send_ShiJianJu_VerifyCode" />
+  </wsdl:message>
+  <wsdl:message name="Send_ShiJianJu_VerifyCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:Send_ShiJianJu_VerifyCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Send_JHSWZGK_VerifyCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:Send_JHSWZGK_VerifyCode" />
+  </wsdl:message>
+  <wsdl:message name="Send_JHSWZGK_VerifyCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:Send_JHSWZGK_VerifyCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Send_JHSWZGK_NoticeSoapIn">
+    <wsdl:part name="parameters" element="tns:Send_JHSWZGK_Notice" />
+  </wsdl:message>
+  <wsdl:message name="Send_JHSWZGK_NoticeSoapOut">
+    <wsdl:part name="parameters" element="tns:Send_JHSWZGK_NoticeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Send_ICBC_Wechat_NoticeSoapIn">
+    <wsdl:part name="parameters" element="tns:Send_ICBC_Wechat_Notice" />
+  </wsdl:message>
+  <wsdl:message name="Send_ICBC_Wechat_NoticeSoapOut">
+    <wsdl:part name="parameters" element="tns:Send_ICBC_Wechat_NoticeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Send_BusinessManage_VerifyCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:Send_BusinessManage_VerifyCode" />
+  </wsdl:message>
+  <wsdl:message name="Send_BusinessManage_VerifyCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:Send_BusinessManage_VerifyCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Send_BusinessManage_NoticeSoapIn">
+    <wsdl:part name="parameters" element="tns:Send_BusinessManage_Notice" />
+  </wsdl:message>
+  <wsdl:message name="Send_BusinessManage_NoticeSoapOut">
+    <wsdl:part name="parameters" element="tns:Send_BusinessManage_NoticeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Send_BusinessManage_AuditNoticeSoapIn">
+    <wsdl:part name="parameters" element="tns:Send_BusinessManage_AuditNotice" />
+  </wsdl:message>
+  <wsdl:message name="Send_BusinessManage_AuditNoticeSoapOut">
+    <wsdl:part name="parameters" element="tns:Send_BusinessManage_AuditNoticeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Send_CCS_ExamSoapIn">
+    <wsdl:part name="parameters" element="tns:Send_CCS_Exam" />
+  </wsdl:message>
+  <wsdl:message name="Send_CCS_ExamSoapOut">
+    <wsdl:part name="parameters" element="tns:Send_CCS_ExamResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ws_sms_outSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Send_AutoSMS">
+      <wsdl:input message="tns:Send_AutoSMSSoapIn" />
+      <wsdl:output message="tns:Send_AutoSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Send_XinxiSMS">
+      <wsdl:input message="tns:Send_XinxiSMSSoapIn" />
+      <wsdl:output message="tns:Send_XinxiSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Send_FangSMS">
+      <wsdl:input message="tns:Send_FangSMSSoapIn" />
+      <wsdl:output message="tns:Send_FangSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Send_Sosoo_Yuyin">
+      <wsdl:input message="tns:Send_Sosoo_YuyinSoapIn" />
+      <wsdl:output message="tns:Send_Sosoo_YuyinSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Send_YinzhouYuqingSMS">
+      <wsdl:input message="tns:Send_YinzhouYuqingSMSSoapIn" />
+      <wsdl:output message="tns:Send_YinzhouYuqingSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Send_JiangbeiYuqingSMS">
+      <wsdl:input message="tns:Send_JiangbeiYuqingSMSSoapIn" />
+      <wsdl:output message="tns:Send_JiangbeiYuqingSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Send_HaishuYuqingSMS">
+      <wsdl:input message="tns:Send_HaishuYuqingSMSSoapIn" />
+      <wsdl:output message="tns:Send_HaishuYuqingSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Send_JiangdongSMS">
+      <wsdl:input message="tns:Send_JiangdongSMSSoapIn" />
+      <wsdl:output message="tns:Send_JiangdongSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Send_SMS_Template">
+      <wsdl:input message="tns:Send_SMS_TemplateSoapIn" />
+      <wsdl:output message="tns:Send_SMS_TemplateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendCnoolVerifyCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">东方热线短信验证码</wsdl:documentation>
+      <wsdl:input message="tns:SendCnoolVerifyCodeSoapIn" />
+      <wsdl:output message="tns:SendCnoolVerifyCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendChengguan">
+      <wsdl:input message="tns:SendChengguanSoapIn" />
+      <wsdl:output message="tns:SendChengguanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendHangzhouKexie">
+      <wsdl:input message="tns:SendHangzhouKexieSoapIn" />
+      <wsdl:output message="tns:SendHangzhouKexieSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendTongfuhui">
+      <wsdl:input message="tns:SendTongfuhuiSoapIn" />
+      <wsdl:output message="tns:SendTongfuhuiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendHangzhouKexie2">
+      <wsdl:input message="tns:SendHangzhouKexie2SoapIn" />
+      <wsdl:output message="tns:SendHangzhouKexie2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendShiJianJu">
+      <wsdl:input message="tns:SendShiJianJuSoapIn" />
+      <wsdl:output message="tns:SendShiJianJuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendStars">
+      <wsdl:input message="tns:SendStarsSoapIn" />
+      <wsdl:output message="tns:SendStarsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendPasswordReset">
+      <wsdl:input message="tns:SendPasswordResetSoapIn" />
+      <wsdl:output message="tns:SendPasswordResetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendNbcia">
+      <wsdl:input message="tns:SendNbciaSoapIn" />
+      <wsdl:output message="tns:SendNbciaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendTBH">
+      <wsdl:input message="tns:SendTBHSoapIn" />
+      <wsdl:output message="tns:SendTBHSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendShiGong">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">施工平台推送</wsdl:documentation>
+      <wsdl:input message="tns:SendShiGongSoapIn" />
+      <wsdl:output message="tns:SendShiGongSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Send_ShiGong_VerifyCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">施工平台验证码</wsdl:documentation>
+      <wsdl:input message="tns:Send_ShiGong_VerifyCodeSoapIn" />
+      <wsdl:output message="tns:Send_ShiGong_VerifyCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Send_ShiJianJu_Notice">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">市监局通知商户</wsdl:documentation>
+      <wsdl:input message="tns:Send_ShiJianJu_NoticeSoapIn" />
+      <wsdl:output message="tns:Send_ShiJianJu_NoticeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Send_ShiJianJu_VerifyCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">市监局短信验证码</wsdl:documentation>
+      <wsdl:input message="tns:Send_ShiJianJu_VerifyCodeSoapIn" />
+      <wsdl:output message="tns:Send_ShiJianJu_VerifyCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Send_JHSWZGK_VerifyCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">交互式网站管控平台短信验证码</wsdl:documentation>
+      <wsdl:input message="tns:Send_JHSWZGK_VerifyCodeSoapIn" />
+      <wsdl:output message="tns:Send_JHSWZGK_VerifyCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Send_JHSWZGK_Notice">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">交互式网站管控平台短信通知</wsdl:documentation>
+      <wsdl:input message="tns:Send_JHSWZGK_NoticeSoapIn" />
+      <wsdl:output message="tns:Send_JHSWZGK_NoticeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Send_ICBC_Wechat_Notice">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">工行微信公众号验证码</wsdl:documentation>
+      <wsdl:input message="tns:Send_ICBC_Wechat_NoticeSoapIn" />
+      <wsdl:output message="tns:Send_ICBC_Wechat_NoticeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Send_BusinessManage_VerifyCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">商机管理系统短信验证码</wsdl:documentation>
+      <wsdl:input message="tns:Send_BusinessManage_VerifyCodeSoapIn" />
+      <wsdl:output message="tns:Send_BusinessManage_VerifyCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Send_BusinessManage_Notice">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">商机管理系统项目通知</wsdl:documentation>
+      <wsdl:input message="tns:Send_BusinessManage_NoticeSoapIn" />
+      <wsdl:output message="tns:Send_BusinessManage_NoticeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Send_BusinessManage_AuditNotice">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">商机管理系统审核通知</wsdl:documentation>
+      <wsdl:input message="tns:Send_BusinessManage_AuditNoticeSoapIn" />
+      <wsdl:output message="tns:Send_BusinessManage_AuditNoticeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Send_CCS_Exam">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">分公司考试</wsdl:documentation>
+      <wsdl:input message="tns:Send_CCS_ExamSoapIn" />
+      <wsdl:output message="tns:Send_CCS_ExamSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ws_sms_outSoap" type="tns:ws_sms_outSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_AutoSMS">
+      <soap:operation soapAction="http://tempuri.org/Send_AutoSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_XinxiSMS">
+      <soap:operation soapAction="http://tempuri.org/Send_XinxiSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_FangSMS">
+      <soap:operation soapAction="http://tempuri.org/Send_FangSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_Sosoo_Yuyin">
+      <soap:operation soapAction="http://tempuri.org/Send_Sosoo_Yuyin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_YinzhouYuqingSMS">
+      <soap:operation soapAction="http://tempuri.org/Send_YinzhouYuqingSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_JiangbeiYuqingSMS">
+      <soap:operation soapAction="http://tempuri.org/Send_JiangbeiYuqingSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_HaishuYuqingSMS">
+      <soap:operation soapAction="http://tempuri.org/Send_HaishuYuqingSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_JiangdongSMS">
+      <soap:operation soapAction="http://tempuri.org/Send_JiangdongSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_SMS_Template">
+      <soap:operation soapAction="http://tempuri.org/Send_SMS_Template" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendCnoolVerifyCode">
+      <soap:operation soapAction="http://tempuri.org/SendCnoolVerifyCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendChengguan">
+      <soap:operation soapAction="http://tempuri.org/SendChengguan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendHangzhouKexie">
+      <soap:operation soapAction="http://tempuri.org/SendHangzhouKexie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendTongfuhui">
+      <soap:operation soapAction="http://tempuri.org/SendTongfuhui" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendHangzhouKexie2">
+      <soap:operation soapAction="http://tempuri.org/SendHangzhouKexie2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendShiJianJu">
+      <soap:operation soapAction="http://tempuri.org/SendShiJianJu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendStars">
+      <soap:operation soapAction="http://tempuri.org/SendStars" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPasswordReset">
+      <soap:operation soapAction="http://tempuri.org/SendPasswordReset" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendNbcia">
+      <soap:operation soapAction="http://tempuri.org/SendNbcia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendTBH">
+      <soap:operation soapAction="http://tempuri.org/SendTBH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendShiGong">
+      <soap:operation soapAction="http://tempuri.org/SendShiGong" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_ShiGong_VerifyCode">
+      <soap:operation soapAction="http://tempuri.org/Send_ShiGong_VerifyCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_ShiJianJu_Notice">
+      <soap:operation soapAction="http://tempuri.org/Send_ShiJianJu_Notice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_ShiJianJu_VerifyCode">
+      <soap:operation soapAction="http://tempuri.org/Send_ShiJianJu_VerifyCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_JHSWZGK_VerifyCode">
+      <soap:operation soapAction="http://tempuri.org/Send_JHSWZGK_VerifyCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_JHSWZGK_Notice">
+      <soap:operation soapAction="http://tempuri.org/Send_JHSWZGK_Notice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_ICBC_Wechat_Notice">
+      <soap:operation soapAction="http://tempuri.org/Send_ICBC_Wechat_Notice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_BusinessManage_VerifyCode">
+      <soap:operation soapAction="http://tempuri.org/Send_BusinessManage_VerifyCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_BusinessManage_Notice">
+      <soap:operation soapAction="http://tempuri.org/Send_BusinessManage_Notice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_BusinessManage_AuditNotice">
+      <soap:operation soapAction="http://tempuri.org/Send_BusinessManage_AuditNotice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_CCS_Exam">
+      <soap:operation soapAction="http://tempuri.org/Send_CCS_Exam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ws_sms_outSoap12" type="tns:ws_sms_outSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_AutoSMS">
+      <soap12:operation soapAction="http://tempuri.org/Send_AutoSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_XinxiSMS">
+      <soap12:operation soapAction="http://tempuri.org/Send_XinxiSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_FangSMS">
+      <soap12:operation soapAction="http://tempuri.org/Send_FangSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_Sosoo_Yuyin">
+      <soap12:operation soapAction="http://tempuri.org/Send_Sosoo_Yuyin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_YinzhouYuqingSMS">
+      <soap12:operation soapAction="http://tempuri.org/Send_YinzhouYuqingSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_JiangbeiYuqingSMS">
+      <soap12:operation soapAction="http://tempuri.org/Send_JiangbeiYuqingSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_HaishuYuqingSMS">
+      <soap12:operation soapAction="http://tempuri.org/Send_HaishuYuqingSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_JiangdongSMS">
+      <soap12:operation soapAction="http://tempuri.org/Send_JiangdongSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_SMS_Template">
+      <soap12:operation soapAction="http://tempuri.org/Send_SMS_Template" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendCnoolVerifyCode">
+      <soap12:operation soapAction="http://tempuri.org/SendCnoolVerifyCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendChengguan">
+      <soap12:operation soapAction="http://tempuri.org/SendChengguan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendHangzhouKexie">
+      <soap12:operation soapAction="http://tempuri.org/SendHangzhouKexie" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendTongfuhui">
+      <soap12:operation soapAction="http://tempuri.org/SendTongfuhui" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendHangzhouKexie2">
+      <soap12:operation soapAction="http://tempuri.org/SendHangzhouKexie2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendShiJianJu">
+      <soap12:operation soapAction="http://tempuri.org/SendShiJianJu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendStars">
+      <soap12:operation soapAction="http://tempuri.org/SendStars" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPasswordReset">
+      <soap12:operation soapAction="http://tempuri.org/SendPasswordReset" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendNbcia">
+      <soap12:operation soapAction="http://tempuri.org/SendNbcia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendTBH">
+      <soap12:operation soapAction="http://tempuri.org/SendTBH" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendShiGong">
+      <soap12:operation soapAction="http://tempuri.org/SendShiGong" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_ShiGong_VerifyCode">
+      <soap12:operation soapAction="http://tempuri.org/Send_ShiGong_VerifyCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_ShiJianJu_Notice">
+      <soap12:operation soapAction="http://tempuri.org/Send_ShiJianJu_Notice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_ShiJianJu_VerifyCode">
+      <soap12:operation soapAction="http://tempuri.org/Send_ShiJianJu_VerifyCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_JHSWZGK_VerifyCode">
+      <soap12:operation soapAction="http://tempuri.org/Send_JHSWZGK_VerifyCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_JHSWZGK_Notice">
+      <soap12:operation soapAction="http://tempuri.org/Send_JHSWZGK_Notice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_ICBC_Wechat_Notice">
+      <soap12:operation soapAction="http://tempuri.org/Send_ICBC_Wechat_Notice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_BusinessManage_VerifyCode">
+      <soap12:operation soapAction="http://tempuri.org/Send_BusinessManage_VerifyCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_BusinessManage_Notice">
+      <soap12:operation soapAction="http://tempuri.org/Send_BusinessManage_Notice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_BusinessManage_AuditNotice">
+      <soap12:operation soapAction="http://tempuri.org/Send_BusinessManage_AuditNotice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send_CCS_Exam">
+      <soap12:operation soapAction="http://tempuri.org/Send_CCS_Exam" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ws_sms_out">
+    <wsdl:port name="ws_sms_outSoap" binding="tns:ws_sms_outSoap">
+      <soap:address location="http://sms.messenger.cnool.net/ws_sms_out.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ws_sms_outSoap12" binding="tns:ws_sms_outSoap12">
+      <soap12:address location="http://sms.messenger.cnool.net/ws_sms_out.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
